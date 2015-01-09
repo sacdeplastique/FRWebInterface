@@ -5,6 +5,10 @@
 <title>Insert title here</title>
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/interface.css">
+
+<!-- Angular Library   -->
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
 
 <!-- jQuery library -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -15,18 +19,37 @@
 <body>
 
 
-<div class="container">
-  <h1>My First Bootstrap Page</h1>
-  <p>This is some text.</p> 
-  
-  <button type="button" class="btn btn-default">Default</button>
-  <button type="button" class="btn btn-primary">Primary</button>
-  <button type="button" class="btn btn-success">Success</button>
-  <button type="button" class="btn btn-info">Info</button>
-  <button type="button" class="btn btn-warning">Warning</button>
-  <button type="button" class="btn btn-danger">Danger</button>
-  <button type="button" class="btn btn-link">Link</button>
-</div>
+	<div class="container" ng-app="" >
+		<div class="col-lg-3" style="text-align: center;">
+			<button type="button" class="btn btn-default glyphicon glyphicon-upload">&nbsp;Upload</button>
+			<br />
+			<br />
+			<img src="img/people.png" class="img-rounded" alt="Unknown" width="200" height="200">
+			<br />
+			<button type="button" class="btn btn-default glyphicon glyphicon-cog"></button>
+			<button type="button" class="btn btn-default glyphicon glyphicon-chevron-left"></button>
+			<button type="button" class="btn btn-default glyphicon glyphicon-chevron-right"></button>
+			<button type="button" class="btn btn-default glyphicon glyphicon-pencil"></button>
+			<br />
+			<br />
+			<img src="img/unknown.png" class="img-rounded" alt="People" width="200" height="200">
+			<br />
+			<button type="button" class="btn btn-default glyphicon glyphicon-cog"></button>
+			<br>
+			<br>
+			<button type="button" class="btn btn-default glyphicon glyphicon-filter"></button>
+			<button type="button" class="btn btn-default glyphicon glyphicon-filter"></button>
+			<button type="button" class="btn btn-default glyphicon glyphicon-search">&nbsp;Search</button>
+		</div>
+
+		<div class="col-lg-9" >
+			<p>
+				Name: <input type="text" ng-model="name">
+			</p>
+			<p ng-bind="name"></p>
+
+		</div>
+	</div>
 
 </body>
 </html>
